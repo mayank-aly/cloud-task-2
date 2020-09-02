@@ -138,7 +138,7 @@ resource "null_resource" "mount_vol" {
         #"sudo mkfs.ext4  ${aws_efs_mount_target..target.mount_target_dns_name}",
         "sudo mount  ${aws_efs_mount_target.target.mount_target_dns_name}  /var/www/html",
         "sudo rm -rf /var/www/html/*",
-        "sudo git clone https://github.com/iam-ghost/terra_task.git /var/www/html/"
+        "sudo git clone https://github.com/mayank-aly/cloud-task-1.git /var/www/html/"
         ]
       }
 }
@@ -166,7 +166,7 @@ resource "aws_s3_bucket" "terraimages" {
 
 
   provisioner "local-exec" {
-    command = "git clone https://github.com/iam-ghost/terra_task/ infra/ "
+    command = "git clone https://github.com/mayank-aly/cloud-task-1.git infra/ "
     }
   
 }
